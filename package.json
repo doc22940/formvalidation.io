@@ -9,8 +9,8 @@
     "predeploy": "npm run sapper",
     "deploy": "rm -rf build/client_info.json && now",
     "copy": "npm run copy:css && npm run copy:js",
-    "copy:css": "rm -rf assets/vendors/formvalidation/*.* && cp -r ../formvalidation-src/dist/css assets/vendors/formvalidation",
-    "copy:js": "rm -rf vendors/formvalidation/*.* && cp -r ../formvalidation-src/dist/es6/* vendors/formvalidation"
+    "copy:css": "rm -rf assets/vendors/formvalidation/* && cp -r ../formvalidation-src/dist/css assets/vendors/formvalidation",
+    "copy:js": "rm -rf vendors/formvalidation/* && cp -r ../formvalidation-src/dist/es6/* vendors/formvalidation"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
