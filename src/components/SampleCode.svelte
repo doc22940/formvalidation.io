@@ -9,8 +9,7 @@ pre {
 
 {#if highlighted}
 <div class="relative">
-    <!--<span class="absolute top-0 right-0 pa2 bg-gray white z-1 pointer" on:click={copy}>{#if copied}Copied{:else}Copy{/if}</span>-->
-    <BrowserFrame><pre class="pa0 ma0 lh-copy" bind:this={codeEle}>{@html highlighted}</pre></BrowserFrame>
+    <BrowserFrame><pre class="pa0 ma0 lh-copy" style="max-height: {maxHeight}; overflow-y: scroll;" bind:this={codeEle}>{@html highlighted}</pre></BrowserFrame>
 </div>
 {:else}
 <div class="ba b--black-10 bg-washed-blue pa0 ma0">
@@ -32,6 +31,7 @@ let codeEle;
 // Public props
 let code = '';
 let lang = 'html';
+let maxHeight = '';
 
 const copy = () => {
     const selection = window.getSelection();
@@ -51,7 +51,8 @@ onMount(() => {
         // Replace the fake tags with the real one
         // If I use <link> or <script> tag inside sample code, Sapper tries to load them
         code.replace(/link-tag/g, 'link')
-            .replace(/script-tag/g, 'script'),
+            .replace(/script-tag/g, 'script')
+            .replace(/fix-html-id/g, 'id'),
         lang
     );
 });
@@ -59,5 +60,6 @@ onMount(() => {
 export {
     code,
     lang,
+    maxHeight,
 };
 </script>

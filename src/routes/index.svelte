@@ -29,18 +29,27 @@
 
 <div class="absolute top-0 left-0 h-75 w-100 hero-bg bg-dark-blue"></div>
 
-<section class="w-100 vh-100 tc">
+<section class="w-100 vh-100">
     <Header />
 
-    <div class="mw9 center pt6 pb5 relative near-white">
+    <div class="mw9 center tc pt6 pb5 relative near-white">
         <h1 class="f1 fw9 lh-copy ma0 lh-title f-headline-l">all new FormValidation</h1>
         <h2 class="f2 mv5">best validation library for JavaScript. zero dependencies.</h2>
-        <div class="f3 center mv5"><span class="bg-gold br-pill pa2 near-black">v1.4.0</span></div>
+        <div class="f3 mv5"><span class="bg-gold br-pill pa2 near-black">v1.4.0</span></div>
     </div>
 
-    <div class="w-100 center mw7"><Typed /></div>
+    <div class="w-100 center mw7">
+        <div class="relative">
+            <Tabs titles={["<span class='white'>Demo</span>", "<span class='white'>Code</span>"]}>
+                <div class="relative bg-white"><Typed /></div>
+                <div class="dn">
+<SampleCode lang="html" code={sampleDemoCode} maxHeight="300px" />
+                </div>
+            </Tabs>
+        </div>
+    </div>
 
-    <div class="mt5 mw6 center">
+    <div class="mt5 mw6 center tc">
         <h3 class="f3">explore more features</h3>
         <span class="w3 h3 f1">👇</span>
     </div>
@@ -58,7 +67,7 @@
                 <li>👍 Completely rewrite in ES6.</li>
                 <li>👍 Type safety. Entire code are made in TypeScript.</li>
                 <li>👍 High code quality via popular analysis tools such as TSLint.</li>
-                <li>👍 Zero dependencies. No jQuery.</li>
+                <li>👍 <span class="bg-gold pa1 br2 b">Zero dependencies</span>. No jQuery.</li>
             </ul>
         </div>
         <div class="w-30">
@@ -139,7 +148,7 @@ module.exports = {
             .end();
     }
 };
-`} />            
+`} />          
             </div>
         </Tabs>
     </div>
@@ -150,13 +159,93 @@ module.exports = {
         <DotDotDot />
         <h2 class="f1">Rich set of validators</h2>
         <ul class="list pa0 lh-copy">
-            <li>👍 More than 50 built-in validators to cover most various types of form field.</li>
-            <li>👍 Easily to develop and reuse your own validator.</li>
-            <li>👍 All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</li>
+            <li>👍 Provide a rich set of validators to cover most various types of form field.</li>
+            <li>👍 Develop and reuse your own validator easily.</li>
+            <li>👍 Support <span class="bg-gold pa1 br2 b">sync and async validators</span>.</li>
         </ul>
     </div>
 
-    <div class="mw7 center">   
+    <div class="mw7 center">
+        <p class="pv3 tc"><span class="bg-gold pa1 br2 b">50 built-in validators</span> and still counting. Here are some of them:</p>
+        <ul class="list pa0 flex flex-wrap">
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                    <a href="/guide/validators/callback/" class="link white">
+                        <div class="f4 fw6">callback</div>
+                        <p class="lh-copy">Check if the input value passes a callback method</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-red">
+                    <a href="/guide/validators/credit-card/" class="link white">
+                        <div class="f4 fw6">creditCard</div>
+                        <p class="lh-copy">Validate a credit card number</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                    <a href="/guide/validators/date/" class="link white">
+                        <div class="f4 fw6">date</div>
+                        <p class="lh-copy">Validate a date</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-green">
+                    <a href="/guide/validators/promise/" class="link white">
+                        <div class="f4 fw6">promise</div>
+                        <p class="lh-copy">Use a Promise to validate value</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                    <a href="/guide/validators/remote/" class="link white">
+                        <div class="f4 fw6">remote</div>
+                        <p class="lh-copy">Perform remote checking via Ajax request</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-red">
+                    <a href="/guide/validators/iban/" class="link white">
+                        <div class="f4 fw6">iban</div>
+                        <p class="lh-copy">Validate an International Bank Account Number</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                    <a href="/guide/validators/id/" class="link white">
+                        <div class="f4 fw6">id</div>
+                        <p class="lh-copy">Validate an identification number</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100" style="background-color: #6a2c70">
+                    <a href="/guide/validators/phone/" class="link white">
+                        <div class="f4 fw6">phone</div>
+                        <p class="lh-copy">Validate a phone number</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-green">
+                    <a href="/guide/validators/vat/" class="link white">
+                        <div class="f4 fw6">vat</div>
+                        <p class="lh-copy">Validate a VAT number</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <p class="mw8 center pv3 lh-copy">All validators can be used independently. Inspried by functional programming paradigm, all built in validators are just functions. So you can use it in browser or with ES6 module, server side frameworks such as <a class="blue link" href="https://expressjs.com/">Express</a>:</p>
+
+    <div class="mw7 center">           
         <Tabs titles={["Browser", "ES6 module"]}>
             <div>
 <SampleCode lang="javascript" code={`
@@ -194,7 +283,7 @@ const result = creditCard().validate({
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Plugin architecture</h2>
-        <p class="lh-copy">The giant and old jQuery plugin doesn't exist anymore. With the new plugin based architectue, the library has really small core. Everything else is built around as a plugin.</p>            
+        <p class="lh-copy">The giant and old jQuery plugin doesn't exist anymore. With the new <span class="bg-gold pa1 br2 b">plugin based architectue</span>, the library has really small core. Everything else is built around as a plugin.</p>            
     </div>
 
     <div class="mw7 center">   
@@ -246,44 +335,104 @@ formValidation(formElement, {
             </div>
         </Tabs>
     </div>
+
+    <div class="mw7 center">
+        <p class="pv3 tc"><span class="bg-gold pa1 br2 b">35 plugins</span> and still counting. Here are some of them:</p>
+        <ul class="list pa0 flex flex-wrap">
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                    <a href="/guide/plugins/declarative/" class="link white">
+                        <div class="f4 fw6">Declarative</div>
+                        <p class="lh-copy">Declaring validator options via HTML attributes</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-red">
+                    <a href="/guide/plugins/mandatory-icon/" class="link white">
+                        <div class="f4 fw6">MandatoryIcon</div>
+                        <p class="lh-copy">Show required icons for mandatory fields</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                    <a href="/guide/plugins/recaptcha/" class="link white">
+                        <div class="f4 fw6">Recaptcha</div>
+                        <p class="lh-copy">Show and validate a Google reCAPTCHA v2</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-green">
+                    <a href="/guide/plugins/start-end-date/" class="link white">
+                        <div class="f4 fw6">StartEndDate</div>
+                        <p class="lh-copy">Validate start and end dates</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                    <a href="/guide/plugins/transformer/" class="link white">
+                        <div class="f4 fw6">Transformer</div>
+                        <p class="lh-copy">Modify the field value before doing validation</p>
+                    </a>
+                </div>
+            </li>
+            <li class="w-33 ph3 mv3 tc">
+                <div class="pa3 br2 shadow-4 h-100 bg-red">
+                    <a href="/guide/plugins/wizard/" class="link white">
+                        <div class="f4 fw6">Wizard</div>
+                        <p class="lh-copy">Support validating multiple steps form</p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
 </section>
 
 <section class="pv5">
-    <div class="mw8 center flex flex-wrap">
-        <div class="w-50 pr4 pb4 br bb b--black-30">
-            <DotDotDot />
-            <h2 class="f1">Friendly UX</h2>
-            <ul class="list pa0 ma0 lh-copy">
-                <li>👍 Can it notify user while field is being validated?</li>
-                <li>👍 Can it stop performing remaining validators if there is a validator that the field does not pass?</li>
-                <li>👍 Can it perform the validation only when the field value exceed a given number of characters?</li>
-                <li>👍 Can it postpone the validation for a given number of seconds from the moment user stops fill in the field?</li>
-            </ul>
-            <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
+    <div class="mw8 center">
+        <DotDotDot />
+        <h2 class="f1">Friendly UX</h2>
+        <ul class="list pa0 ma0 lh-copy">
+            <li>👍 Can it notify user while field is being validated?</li>
+            <li>👍 Can it stop performing remaining validators if there is a validator that the field does not pass?</li>
+            <li>👍 Can it perform the validation only when the field value exceed a given number of characters?</li>
+            <li>👍 Can it postpone the validation for a given number of seconds from the moment user stops fill in the field?</li>
+        </ul>
+        <p class="lh-copy">Yes! FormValidation provides a built in mechanism to support these requirements.</p>
+    </div>
+</section>
+
+<section class="pb5">
+    <div class="mw8 center flex flex-wrap white">
+        <div class="w-33 ph3">
+            <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                <h3 class="f4 fw6 tc">Customizable</h3>
+                <div class="lh-copy">You can adjust almost everything:</div>
+                <ul class="list pa0 ma0 mt3 lh-copy">
+                    <li>👌 The error icon position</li>
+                    <li>👌 The location of error message</li>
+                    <li>👌 Their colors when the field is valid or invalid</li>
+                </ul>
+            </div>
         </div>
-        <div class="w-50 ph4 pb4 bb b--black-30">
-            <DotDotDot />
-            <h2 class="f1">Easy to customize</h2>
-            <p class="lh-copy">You can adjust almost everything:</p>
-            <ul class="list pa0 ma0 lh-copy">
-                <li>👌 The error icon position</li>
-                <li>👌 The location of error message</li>
-                <li>👌 Their colors when the field is valid or invalid</li>
-            </ul>
+        <div class="w-33 ph3">
+            <div class="pa3 br2 shadow-4 h-100 bg-red">
+                <h3 class="f4 fw6 tc">Flexible</h3>
+                <ul class="list pa0 ma0 lh-copy">
+                    <li>👌 Support dynamic field</li>
+                    <li>👌 The validator can be enabled or disabled on the fly</li>
+                    <li>👌 Provide a lot of events that you can hook on</li>
+                </ul>
+            </div>
         </div>
-        <div class="w-50 pr4 pt4 br b--black-30">
-            <DotDotDot />
-            <h2 class="f1">Flexible</h2>
-            <ul class="list pa0 ma0 lh-copy">
-                <li>👌 Support dynamic field</li>
-                <li>👌 The validator can be enabled or disabled on the fly</li>
-                <li>👌 Provide a lot of events that you can hook on</li>
-            </ul>
-        </div>
-        <div class="w-50 ph4 pt4">
-            <DotDotDot />
-            <h2 class="f1">Localization</h2>
-            <p class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</p>
+        <div class="w-33 ph3">
+            <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                <h3 class="f4 fw6 tc">Localizable</h3>
+                <div class="lh-copy">The default error messages of built-in validators are available in 39 language packages. There is also a plugin to support switching between different locales easily.</div>    
+            </div>
         </div>
     </div>
 </section>
@@ -292,7 +441,7 @@ formValidation(formElement, {
     <div class="mw8 center">
         <DotDotDot />
         <h2 class="f1">Support any form, CSS framework</h2>
-        <p class="lh-copy">FormValidation is designed to support validating any form that uses or doesn't use with CSS framework. In addition to that, the library provides many built-in plugins which you can plug to use with popular CSS frameworks:</p>            
+        <p class="lh-copy">FormValidation is designed to support validating any form that uses or doesn't use with CSS framework. In addition to that, the library provides many built-in plugins which you can plug to <span class="bg-gold pa1 br2 b">use with popular CSS frameworks</span>:</p>            
     </div>
 
     <div class="mw7 center">
@@ -397,151 +546,59 @@ formValidation(formElement, {
         <DotDotDot />
         <h2 class="f1">Integrate with UI libraries</h2>
         <p class="lh-copy">FormValidation plays nicely with other libraries. It has useful APIs to integrate with another libraries.</p>
-        <p class="lh-copy">By using the same principle, you can easily integrate it with any UI library out there. To name a few:</p>
-        <ul class="list pa0 ma0 lh-copy">
-            <li>👉 <span class="b">Auto complete</span>: autoComplete.js, Typeahead</li>
-            <li>👉 <span class="b">Color pickers</span>: pickr</li>
-            <li>👉 <span class="b">Date pickers</span>: Bootstrap Datepicker, flatpickr, pickadate, Pikaday</li>
-            <li>👉 <span class="b">Editors</span>: CKEditor, Summernote, TinyMCE</li>
-            <li>👉 <span class="b">Tags input</span>: Choices, Chosen, Select2, Selectize, tagify</li>
-        </ul>
-    </div>
-</section>
-
-<section class="pv5">
-    <div class="mw8 center">
-        <DotDotDot />
-        <h2 class="f1">Compatible with frameworks</h2>
-        <p class="lh-copy">FormValidation can be used with popular frameworks such as React, Preact, Vue, Svelte, etc.</p>
+        <p class="lh-copy">By using the same principle, you can easily <span class="bg-gold pa1 br2 b">integrate it with any UI library</span> out there. To name a few:</p>
     </div>
 
-    <div class="mw7 center">
-        <ul class="list pa0 flex flex-wrap">
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Angular" class="w3 h3 mb1" src="/branches/angular.svg" />
-                    <div>Angular</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Aurelia" class="w3 h3 mb1" src="/branches/aurelia.svg" />
-                    <div>Aurelia</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Backbone" class="w3 h3 mb1" src="/branches/backbone.svg" />
-                    <div>Backbone</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Ember" class="w3 h3 mb1" src="/branches/ember.svg" />
-                    <div>Ember</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Inferno" class="w3 h3 mb1" src="/branches/inferno.svg" />
-                    <div>Inferno</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="jQuery" class="w3 h3 mb1" src="/branches/jquery.svg" />
-                    <div>jQuery</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Knockout" class="w3 h3 mb1" src="/branches/knockout.svg" />
-                    <div>Knockout</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Hyperapp" class="w3 h3 mb1" src="/branches/hyperapp.svg" />
-                    <div>Hyperapp</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Marko" class="w3 h3 mb1" src="/branches/marko.svg" />
-                    <div>Marko</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Mithril" class="w3 h3 mb1" src="/branches/mithril.svg" />
-                    <div>Mithril</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Preact" class="w3 h3 mb1" src="/branches/preact.svg" />
-                    <div>Preact</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="RE:DOM" class="w3 h3 mb1" src="/branches/redom.svg" />
-                    <div>RE:DOM</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="React" class="w3 h3 mb1" src="/branches/react.svg" />
-                    <div>React</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Riot" class="w3 h3 mb1" src="/branches/riot.svg" />
-                    <div>Riot</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Stimulus" class="w3 h3 mb1" src="/branches/stimulus.svg" />
-                    <div>Stimulus</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Svelte" class="w3 h3 mb1" src="/branches/svelte.svg" />
-                    <div>Svelte</div>
-                </a>
-            </li>
-            <li class="w-20 pa3 tc">
-                <a href="javascript: void(0);" class="link">
-                    <img alt="Vue" class="w3 h3 mb1" src="/branches/vue.svg" />
-                    <div>Vue</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="mw8 center flex">
-        <div class="w-70">
-            In order to use FormValidation with these JavaScript frameworks, you might need to bundle it.
-            <p class="lh-copy">No worry! FormValidation provides ES6 classes, so you can bundle it easily with popular bundlers such as Webpack, Rollup.</p>
+    <div class="mw7 center flex flex-wrap white">
+        <div class="w-33 ph3 mv3">
+            <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                <h3 class="f4 fw6 tc">Auto complete</h3>
+                <ul class="list pa0 ma0 mt3 lh-copy">
+                    <li>👉 autoComplete.js</li>
+                    <li>👉 Typeahead</li>
+                </ul>
+            </div>
         </div>
-        <div class="w-30">
-            <ul class="list ma0 pa0 flex flex-wrap">
-                <li class="w-50 pa3 tc">
-                    <a href="javascript: void(0);" class="link">
-                        <img alt="Webpack" class="w3 h3 mb1" src="/branches/webpack.svg" />
-                        <div>Webpack</div>
-                    </a>
-                </li>
-                <li class="w-50 pa3 tc">
-                    <a href="javascript: void(0);" class="link">
-                        <img alt="Rollup" class="w3 h3 mb1" src="/branches/rollup.svg" />
-                        <div>Rollup</div>
-                    </a>
-                </li>
-            </ul>
+        <div class="w-33 ph3 mv3">
+            <div class="pa3 br2 shadow-4 h-100 bg-red">
+                <h3 class="f4 fw6 tc">Color pickers</h3>
+                <ul class="list pa0 ma0 lh-copy">
+                    <li>👉 pickr</li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-33 ph3 mv3">
+            <div class="pa3 br2 shadow-4 h-100 bg-gold">
+                <h3 class="f4 fw6 tc">Date pickers</h3>
+                <ul class="list pa0 ma0 lh-copy">
+                    <li>👉 Bootstrap Datepicker</li>
+                    <li>👉 flatpickr</li>
+                    <li>👉 pickadate</li>
+                    <li>👉 Pikaday</li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-33 ph3 mv3">
+            <div class="pa3 br2 shadow-4 h-100 bg-green">
+                <h3 class="f4 fw6 tc">Editors</h3>
+                <ul class="list pa0 ma0 lh-copy">
+                    <li>👉 CKEditor</li>
+                    <li>👉 Summernote</li>
+                    <li>👉 TinyMCE</li>
+                </ul>
+            </div>
+        </div>
+        <div class="w-33 ph3 mv3">
+            <div class="pa3 br2 shadow-4 h-100 bg-blue">
+                <h3 class="f4 fw6 tc">Tags input</h3>
+                <ul class="list pa0 ma0 lh-copy">
+                    <li>👉 Choices</li>
+                    <li>👉 Chosen</li>
+                    <li>👉 Select2</li>
+                    <li>👉 Selectize</li>
+                    <li>👉 tagify</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -624,6 +681,7 @@ formValidation(formElement, {
                 <li><a href="/guide/validators/" class="link">Validators</a></li>
                 <li><a href="/guide/plugins/" class="link">Plugins</a></li>
                 <li><a href="/guide/api/" class="link">API</a></li>
+                <li><a href="/guide/events/" class="link">Events</a></li>
                 <li><a href="/guide/examples/" class="link">Examples</a></li>
             </ul>
         </div>
@@ -637,7 +695,6 @@ formValidation(formElement, {
             <div class="f4 fw6 mv3">About</div>
             <div class="pb2">&copy; 2013 &mdash; 2019 Nguyen Huu Phuoc</div>
             <div class="pb2">all rights reserved.</div>
-            <div class="pb2">handcrafted with <span class="dark-red"><i class="fa fa-heart"></i></span></div>
             <div class="flex items-center">
                 <a href="https://twitter.com/nghuuphuoc" class="dib dim link black-70 ba b-black-70 br-pill w2 h2 flex items-center justify-center mr2">
                     <svg class="w-60 h-60" viewBox="0 0 24 24" style="stroke: rgb(0, 0, 0); fill: none; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round"><path d="M23,6.628l-2-0.5l1-2l-2.464,0.7c-1.809-1.688-4.644-1.589-6.332,0.22c-0.78,0.836-1.21,1.938-1.204,3.08v1 c-3.539,0.73-6.634-1.2-9.5-4.5c-0.5,2.667,0,4.667,1.5,6l-3-0.5c0.405,2.069,1.362,3.7,4,4l-2.5,1c1,2,2.566,2.31,5,2.5 c-1.893,1.353-4.174,2.054-6.5,2c12.755,5.669,20-2.664,20-10V8.3L23,6.628z"></path></svg>
@@ -658,4 +715,6 @@ import SampleCode from '../components/SampleCode.svelte';
 import Tab from '../components/Tab.svelte';
 import Tabs from '../components/Tabs.svelte';
 import Testimonial from '../components/Testimonial.svelte';
+
+import sampleDemoCode from '../_demo/typed/Tachyons.programmatic';
 </script>
