@@ -42,7 +42,7 @@
         <h3>Using with ES6 module</h3>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import color from 'formvalidation/validators/color';
+import color from 'formvalidation/dist/es6/validators/color';
 
 const result = color().validate({
     value: ...,
@@ -72,7 +72,7 @@ result is an object of
                 {#each samples as sample, i}
                 <tr class="striped--light-gray">
                     <td class="pv2 ph3">{#if i === 0}{type}{/if}</td>
-                    <SampleData sample={sample} />
+                    <SampleData sample={sample} sender="/guide/validators/color/basic" />
                 </tr>
                 {/each}
             {/each}
@@ -216,7 +216,7 @@ slategrey, snow, springgreen, steelblue</code></pre>
         <p class="lh-copy">The following snippet shows how to use the color validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
-import color from 'formvalidation/validators/color';
+import color from 'formvalidation/dist/es6/validators/color';
 
 const res1 = color().validate({
     value: '#0000FF',
@@ -250,10 +250,8 @@ const res3 = color().validate({
     <RelatedValidators validators={['regexp']} />
 
     <section class="mv5">
-        <div class="fl w-50 tl">
+        <div class="flex">
             <PrevButton href="/guide/validators/choice/">choice validator</PrevButton>
-        </div>
-        <div class="fl w-50 tr">
             <NextButton href="/guide/validators/credit-card/" class="b blue dim link pa2">creditCard validator</NextButton>
         </div>
     </section>

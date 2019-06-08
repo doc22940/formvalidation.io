@@ -1,5 +1,5 @@
 <BootstrapLayout onLoaded={onLoaded}>
-    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender='/guide/validators/bic/basic' on:received={receive}>
+    <ReceiveMessage channel="SAMPLE_FIELD_VALUE" sender='/guide/validators/color/basic' on:received={receive}>
         <form id="demoForm" method="POST">
             <div class="form-group row">
                 <label class="col-sm-3 col-form-label">Color</label>
@@ -14,12 +14,12 @@
 <script>
 import { onDestroy } from 'svelte';
 
-import formValidation from 'formvalidation/es6/core/Core';
-import DemoFrame from 'formvalidation/es6/plugins/DemoFrame';
-import Icon from 'formvalidation/es6/plugins/Icon';
-import Trigger from 'formvalidation/es6/plugins/Trigger';
-import Bootstrap from 'formvalidation/es6/plugins/Bootstrap';
-import color from 'formvalidation/es6/validators/color';
+import formValidation from 'formvalidation/dist/es6/core/Core';
+import DemoFrame from 'formvalidation/dist/es6/plugins/DemoFrame';
+import Icon from 'formvalidation/dist/es6/plugins/Icon';
+import Trigger from 'formvalidation/dist/es6/plugins/Trigger';
+import Bootstrap from 'formvalidation/dist/es6/plugins/Bootstrap';
+import color from 'formvalidation/dist/es6/validators/color';
 
 import sampleCode from './Bootstrap.programmatic';
 import BootstrapLayout from '../../../../../components/demo/BootstrapLayout.svelte';
