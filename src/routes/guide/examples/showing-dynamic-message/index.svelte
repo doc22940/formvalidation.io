@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Showing dynamic message</title>
 </svelte:head>
 
 <GuideLayout>
@@ -18,7 +18,7 @@
         <Demo prefix="/guide/examples/showing-dynamic-message" frameworks={['Bootstrap', 'Tachyons']} />
     </section>
 
-    <Examples examples={['Showing all messages']} />
+    <Examples examples={['Showing all messages', 'Showing dynamic message']} />
 
     <RelatedValidators validators={['callback']} />
 </GuideLayout>

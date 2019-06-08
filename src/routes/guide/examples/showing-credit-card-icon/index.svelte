@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>FormValidation • Field selector</title>
+	<title>FormValidation • Showing credit card icon</title>
 </svelte:head>
 
 <GuideLayout>
@@ -44,7 +44,11 @@
         <Demo prefix="/guide/examples/showing-credit-card-icon" frameworks={['Tachyons']} />
     </section>
 
-    <Examples examples={['Accepting test credit card numbers', 'Asking credit card number to match with selected type']} />
+    <Examples examples={[
+        'Accepting test credit card numbers',
+        'Asking credit card number to match with selected type',
+        'Showing credit card icon',
+    ]} />
 
     <RelatedValidators validators={['creditCard']} />
 </GuideLayout>
