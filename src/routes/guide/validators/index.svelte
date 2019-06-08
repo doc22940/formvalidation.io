@@ -14,10 +14,10 @@
         <Heading>Popular validators</Heading>
         <p class="lh-copy">In most cases, this list covers validators you often need. All these validators are included in the <code>dist/js/FormValidation(.min).js</code> file.</p>
 
-        <div class="list pa0 flex flex-wrap">
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
         {#each PopularValidators as v, i}
-            <div class="w-33 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" class="link pointer white db h-100">
                         <div class="f4 fw6">{v.name}</div>
                         <p class="lh-copy">{v.description}</p>
@@ -32,10 +32,10 @@
         <Heading>Special validators</Heading>
         <p class="lh-copy">The following list includes special validators which you often don't need most of the times. In order to use them, you have to include the <code>dist/js/FormValidation.full(.min).js</code> file to your page.</p>
         
-        <div class="list pa0 flex flex-wrap">
+        <div style="display: grid; grid-column-gap: 2em; grid-row-gap: 2em; grid-template-columns: repeat(3, 1fr);">
         {#each SpecialValidators as v, i}
-            <div class="w-33 ph3 mv3">
-                <div class="pa3 br2 shadow-4 h-100" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+            <div class="br2" class:bg-blue={i % 4 === 0} class:bg-red={i % 4 === 1} class:bg-gold={i % 4 === 2} class:bg-green={i % 4 === 3}>
+                <div class="pa3 shadow-4 h-100">
                     <a href="/guide/validators/{camelCaseToDash(v.name)}/" title="{v.description}" class="link pointer white db h-100">
                         <div class="f4 fw6">{v.name}</div>
                         <p class="lh-copy">{v.description}</p>
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         <p class="lh-copy">All validators are able to be imported and used with ES6 module. It's super useful if you want to use validator with front-end frameworks (such as <a href="https://reactjs.org/" class="blue dim link">React</a>, 
             <a href="https://vuejs.org/" class="blue dim link">VueJS</a>, <a href="https://svelte.technology/" class="blue dim link">Svelte</a>, .etc), or in server environment with NodeJS frameworks (such as <a href="https://expressjs.com/" class="blue dim link">Express</a>).
         </p>
-        <p class="lh-copy">The following snippet shows how to use the creditCard validator with JavaScript module:</p>
+        <p class="lh-copy">The following snippet shows how to use the creditCard validator with ES6 module:</p>
 <SampleCode lang="javascript" code={`
 // You might need to change the importing path
 import creditCard from 'formvalidation/dist/es6/validators/creditCard';
