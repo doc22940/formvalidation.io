@@ -28,9 +28,15 @@
         'Showing dynamic message'
     ]} />
 
+    <Examples heading="Improve user experience" examples={[
+        'Pending validation for a given number of seconds',
+        'Performing validation if field value exceed given number of characters',
+    ]} />
+
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with flatpickr',
         'Integrating with TinyMCE',
+        'Using flatpickr for start and end dates',
     ]} />
 </GuideLayout>
 
