@@ -8,7 +8,11 @@
 
     <Examples heading="Advanced examples" examples={[
         'Asking fields to be unique',
+        'Clearing field when clicking the icon',
+        'Enabling validators on the fly',
         'Excluding field by given condition',
+        'Requiring at least one field',
+        'Switching validators on the same field',
         'Using HTML 5 inputs and attributes',
     ]} />
 
@@ -17,6 +21,7 @@
         'Asking credit card number to match with selected type',
         'Disabling date',
         'Is a@b valid email address',
+        'Preventing user to have same value as the placeholder',
         'Showing credit card icon',
         'Supporting custom date format',
         'Trimming a value',
