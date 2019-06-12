@@ -3,10 +3,10 @@
 </svelte:head>
 
 <GuideLayout>
-    <h1 class="f3 f2-m f1-l tc">Examples</h1>
-    <h2 class="f4 fw4 tc">A collection of useful examples you can play with</h2>
+    <h1 class="tc lh-copy">A collection of useful examples you can play with</h1>
 
     <Examples heading="Basic examples" examples={[
+        'Can not submit form after validation',
         'Using Ajax to submit the form',
     ]} />
 
@@ -20,6 +20,7 @@
         'Requiring at least one field',
         'Switching validators on the same field',
         'Using HTML 5 inputs and attributes',
+        'Validating checkbox list placed in multiple columns',
         'Validating multiple inputs as one',
     ]} />
 
@@ -41,6 +42,9 @@
 
     <Examples heading="Customize icons and messages" examples={[
         'Adjusting icon position',
+        'Changing success and error colors',
+        'Hiding messages',
+        'Hiding success class',
         'Showing all messages',
         'Showing custom message returned from server',
         'Showing dynamic message',
@@ -62,7 +66,10 @@
 
     <Examples heading="Integrate with 3rd party libraries" examples={[
         'Integrating with 3rd party libraries',
+        'Integrating with Bootbox',
+        'Integrating with Bootstrap Datepicker',
         'Integrating with flatpickr',
+        'Integrating with Summernote',
         'Integrating with TinyMCE',
         'Using flatpickr for start and end dates',
     ]} />

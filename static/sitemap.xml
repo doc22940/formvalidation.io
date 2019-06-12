@@ -226,6 +226,7 @@
     <url><loc>https://formvalidation.io/guide/events/core.validator.validated/</loc></url>
     <url><loc>https://formvalidation.io/guide/events/core.validator.validating/</loc></url>
 
+    <url><loc>https://formvalidation.io/guide/examples/can-not-submit-form-after-validation/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-ajax-to-submit-the-form/</loc></url>
     
     <url><loc>https://formvalidation.io/guide/examples/asking-fields-to-be-unique/</loc></url>
@@ -237,6 +238,7 @@
     <url><loc>https://formvalidation.io/guide/examples/requiring-at-least-one-field/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/switching-validators-on-the-same-field/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-html-5-inputs-and-attributes/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/validating-checkbox-list-placed-in-multiple-columns/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/validating-multiple-inputs-as-one/</loc></url>
 
     <url><loc>https://formvalidation.io/guide/examples/accepting-test-credit-card-numbers/</loc></url>
@@ -254,6 +256,9 @@
     <url><loc>https://formvalidation.io/guide/examples/validating-social-account-url/</loc></url>
 
     <url><loc>https://formvalidation.io/guide/examples/adjusting-icon-position/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/changing-success-and-error-colors/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/hiding-messages/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/hiding-success-class/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-all-messages/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-custom-message-returned-from-server/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/showing-dynamic-message/</loc></url>
@@ -271,7 +276,10 @@
     <url><loc>https://formvalidation.io/guide/examples/performing-validation-if-field-value-exceed-given-number-of-characters/</loc></url>
 
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-3rd-party-libraries/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/integrating-with-bootbox/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/integrating-with-bootstrap-datepicker/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-flatpickr/</loc></url>
+    <url><loc>https://formvalidation.io/guide/examples/integrating-with-summernote/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/integrating-with-tinymce/</loc></url>
     <url><loc>https://formvalidation.io/guide/examples/using-flatpickr-for-start-and-end-dates/</loc></url>
     
