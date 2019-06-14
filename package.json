@@ -6,8 +6,9 @@
     "build": "node --max-old-space-size=4096 node_modules/.bin/sapper build --legacy",
     "export": "node --max-old-space-size=4096 node_modules/.bin/sapper export --legacy",
     "start": "node __sapper__/build",
-    "predeploy": "npm run build",
-    "deploy": "now"
+    "predeploy": "npm run export",
+    "deploy": "netlify deploy --dir=__sapper__/export --prod",
+    "export:preview": "cd __sapper__/export && http-server -p 8000 -S -C ../../ssl/localhost.pem -K ../../ssl/localhost-key.pem"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -15,6 +16,7 @@
     "sirv": "^0.4.2"
   },
   "devDependencies": {
+    "http-server": "^0.11.1",
     "rollup": "^1.12.3",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-commonjs": "^10.0.0",
