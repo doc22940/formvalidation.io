@@ -48,6 +48,5 @@ $ npm run dev
 ## Deployment
 
 ```
-$ npm run predeploy
 $ npm run deploy
 ```
