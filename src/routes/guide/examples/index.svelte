@@ -8,9 +8,11 @@
     <Examples heading="Basic examples" examples={[
         'Can not submit form after validation',
         'Using Ajax to submit the form',
+        'Validating form manually',
     ]} />
 
     <Examples heading="Advanced examples" examples={[
+        'Adding dynamic field',
         'Asking fields to be unique',
         'Clearing field when clicking the icon',
         'Enabling validators on the fly',
@@ -19,6 +21,7 @@
         'Regenerating captcha when the form is invalid',
         'Requiring at least one field',
         'Switching validators on the same field',
+        'Updating validator options',
         'Using HTML 5 inputs and attributes',
         'Validating checkbox list placed in multiple columns',
         'Validating multiple inputs as one',
@@ -50,6 +53,7 @@
         'Showing dynamic message',
         'Showing icons in custom area',
         'Showing messages in custom area',
+        'Showing only one message each time',
         'Using FontAwesome icons',
         'Using Glyphicons icons',
         'Using Material Design icons',

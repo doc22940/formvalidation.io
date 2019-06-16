@@ -3,10 +3,12 @@ export default class DemoFrame extends Plugin {
     constructor(opts) {
         super(opts);
 
-        this.updateHeight = this.onFieldStatusChanged.bind(this);
+        this.updateHeight = this.updateDemoHeight.bind(this);
     }
     install() {
         this.core
+            .on('core.field.added', this.updateHeight)
+            .on('core.field.removed', this.updateHeight)
             .on('core.field.validating', this.updateHeight)
             .on('core.field.valid', this.updateHeight)
             .on('core.field.invalid', this.updateHeight)
@@ -18,16 +20,18 @@ export default class DemoFrame extends Plugin {
             data: this.opts.sampleCode,
         }, window.location.origin);
 
-        this.onFieldStatusChanged();
+        this.updateDemoHeight();
     }
     uninstall() {
         this.core
+            .off('core.field.added', this.updateHeight)
+            .off('core.field.removed', this.updateHeight)
             .off('core.field.validating', this.updateHeight)
             .off('core.field.valid', this.updateHeight)
             .off('core.field.invalid', this.updateHeight)
             .off('core.field.notvalidated', this.updateHeight);
     }
-    onFieldStatusChanged() {
+    updateDemoHeight() {
         window.parent.postMessage({
             channel: 'DEMO_UPDATE_STATUS',
             sender: this.opts.sender,
