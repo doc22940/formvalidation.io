@@ -4,10 +4,10 @@ export default class MandatoryIcon extends Plugin {
     constructor(opts) {
         super(opts);
         this.removedIcons = {
-            'Valid': '',
-            'Invalid': '',
-            'Validating': '',
-            'NotValidated': '',
+            Invalid: '',
+            NotValidated: '',
+            Valid: '',
+            Validating: '',
         };
         this.icons = new Map();
         this.elementValidatingHandler = this.onElementValidating.bind(this);
@@ -51,9 +51,9 @@ export default class MandatoryIcon extends Plugin {
         this.iconClasses = e.classes;
         const icons = this.opts.icon.split(' ');
         const feedbackIcons = {
-            'Valid': this.iconClasses.valid ? this.iconClasses.valid.split(' ') : [],
-            'Invalid': this.iconClasses.invalid ? this.iconClasses.invalid.split(' ') : [],
-            'Validating': this.iconClasses.validating ? this.iconClasses.validating.split(' ') : [],
+            Invalid: this.iconClasses.invalid ? this.iconClasses.invalid.split(' ') : [],
+            Valid: this.iconClasses.valid ? this.iconClasses.valid.split(' ') : [],
+            Validating: this.iconClasses.validating ? this.iconClasses.validating.split(' ') : [],
         };
         Object.keys(feedbackIcons).forEach((status) => {
             const classes = [];
