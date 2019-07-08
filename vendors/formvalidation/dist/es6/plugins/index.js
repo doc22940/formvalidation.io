@@ -1,10 +1,10 @@
 import Alias from './Alias';
 import Aria from './Aria';
-import AutoFocus from './AutoFocus';
 import Declarative from './Declarative';
 import DefaultSubmit from './DefaultSubmit';
 import Dependency from './Dependency';
 import Excluded from './Excluded';
+import FieldStatus from './FieldStatus';
 import Framework from './Framework';
 import Icon from './Icon';
 import Message from './Message';
@@ -15,11 +15,11 @@ import Trigger from './Trigger';
 export default {
     Alias,
     Aria,
-    AutoFocus,
     Declarative,
     DefaultSubmit,
     Dependency,
     Excluded,
+    FieldStatus,
     Framework,
     Icon,
     Message,

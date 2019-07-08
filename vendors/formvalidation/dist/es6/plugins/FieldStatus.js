@@ -35,6 +35,9 @@ export default class FieldStatus extends Plugin {
     areFieldsValid() {
         return Array.from(this.statuses.values()).every((value) => value === 'Valid');
     }
+    getStatues() {
+        return this.statuses;
+    }
     onFieldAdded(e) {
         this.statuses.set(e.field, 'NotValidated');
     }
