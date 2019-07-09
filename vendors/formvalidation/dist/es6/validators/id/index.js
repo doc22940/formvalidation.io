@@ -16,6 +16,7 @@ import hkId from './hkId';
 import hrId from './hrId';
 import idId from './idId';
 import ieId from './ieId';
+import ilId from './ilId';
 import isId from './isId';
 import krId from './krId';
 import ltId from './ltId';
@@ -41,8 +42,8 @@ import zaId from './zaId';
 export default function id() {
     const COUNTRY_CODES = [
         'AR', 'BA', 'BG', 'BR', 'CH', 'CL', 'CN', 'CO', 'CZ', 'DK', 'EE', 'ES', 'FI', 'FR', 'HK', 'HR', 'ID', 'IE',
-        'IS', 'KR', 'LT', 'LV', 'ME', 'MK', 'MX', 'MY', 'NL', 'NO', 'PE', 'PL', 'RO', 'RS', 'SE', 'SI', 'SK', 'SM',
-        'TH', 'TR', 'TW', 'UY', 'ZA',
+        'IL', 'IS', 'KR', 'LT', 'LV', 'ME', 'MK', 'MX', 'MY', 'NL', 'NO', 'PE', 'PL', 'RO', 'RS', 'SE', 'SI', 'SK',
+        'SM', 'TH', 'TR', 'TW', 'UY', 'ZA',
     ];
     return {
         validate(input) {
@@ -118,6 +119,9 @@ export default function id() {
                     break;
                 case 'ie':
                     result = ieId(input.value);
+                    break;
+                case 'il':
+                    result = ilId(input.value);
                     break;
                 case 'is':
                     result = isId(input.value);

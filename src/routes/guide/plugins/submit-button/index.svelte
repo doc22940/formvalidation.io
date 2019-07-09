@@ -33,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function(e) {
                 ...
             },
             plugins: {
-                submitButton: new FormValidation.plugins.SubmitButton(),
+                submitButton: new FormValidation.plugins.SubmitButton({
+                    // Optional setting:
+                    // Set it to true if you are using a traditional ASP.Net form 
+                    // and there is a custom handler for the submit button 
+                    // aspNetButton: false,
+                }),
                 ...
             },
         }
@@ -44,7 +49,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </html>
 `} />
         <p class="lh-copy">The sample code above assumes that the FormValidation files are placed inside the <code>vendors</code> directory. You might need to change the path depending on where you place them on the server.</p>
-        <Tip>If you want the form to be submited to the server after pressing its Submit button and all fields are valid, use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit</a> plugin</Tip>
+        <Tip>If you want the form to be submited to the server after pressing its Submit button and all fields are valid, use the <a href="/guide/plugins/default-submit" class="blue dim link">DefaultSubmit plugin</a></Tip>
+        <Tip>Look at the <a href="/guide/plugins/field-status" class="blue dim link">FieldStatus plugin</a> to see how you can disable the Submit button when there is at least one invalid field</Tip>
     </section>
 
     <section class="mv5">
@@ -56,11 +62,13 @@ document.addEventListener('DOMContentLoaded', function(e) {
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Fixed an issue that the click handler of submit button of ASP.Net form isn't executed. Now you can fix it by setting the <code>aspNetButton</code> option to <code>true</code>.</li>
             <li>v1.0.0: First release</li>
         </ul>
     </section>
 
     <Examples examples={[
+        'Enabling submit button only when all fields are valid',
         'Multiple steps wizard',
         'Using Ajax to submit the form',
         'Validating form manually',

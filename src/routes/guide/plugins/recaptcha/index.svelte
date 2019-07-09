@@ -6,6 +6,8 @@
     <h1 class="f3 f2-m f1-l tc">Recaptcha plugin</h1>
     <h2 class="f4 fw4 tc">Shows and validates a Google reCAPTCHA v2</h2>
 
+    <Tip>Use the <a href="/guide/plugins/recaptcha3" class="blue dim link">Recaptcha3</a> plugin if you are using Google reCAPTCHA v3</Tip>
+
     <section class="mv5">
         <Heading>Usage</Heading>
         <p class="lh-copy">To use it, you need to register a site and secret keys at <a href="https://www.google.com/recaptcha/admin" class="blue dim link">https://www.google.com/recaptcha/admin</a>.</p>
@@ -210,6 +212,7 @@ echo $result;
     <section class="mv5">
         <Heading>Changelog</Heading>
         <ul class="pa0 ma0 ml3 lh-copy">
+            <li>v1.5.0: Hide the icon for the invisible reCAPTCHA.</li>
             <li>v1.4.0: In the previous version, the Recaptcha plugin doesn't hide the error message and error icon when user click the captcha checkbox.
                 The error icon disappears when the captcha is expired. This version fixes that.</li>
             <li>v1.1.0:
@@ -227,7 +230,7 @@ echo $result;
     <section class="mv5">
         <div class="flex">
             <PrevButton target="/guide/plugins/pure">Pure plugin</PrevButton>
-            <NextButton target="/guide/plugins/semantic">Semantic plugin</NextButton>
+            <NextButton target="/guide/plugins/recaptcha3">Recaptcha3 plugin</NextButton>
         </div>
     </section>
 </GuideLayout>
@@ -239,4 +242,5 @@ import GuideLayout from '../../../../components/GuideLayout.svelte';
 import NextButton from '../../../../components/NextButton.svelte';
 import PrevButton from '../../../../components/PrevButton.svelte';
 import SampleCode from '../../../../components/SampleCode.svelte';
+import Tip from '../../../../components/Tip.svelte';
 </script>

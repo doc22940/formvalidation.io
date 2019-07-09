@@ -148,9 +148,14 @@ export default class Recaptcha extends Plugin {
     }
     onIconPlaced(e) {
         if (e.field === Recaptcha.CAPTCHA_FIELD) {
-            const captchaContainer = document.getElementById(this.opts.element);
-            if (captchaContainer) {
-                captchaContainer.parentNode.insertBefore(e.iconElement, captchaContainer.nextSibling);
+            if (this.opts.size === 'invisible') {
+                e.iconElement.style.display = 'none';
+            }
+            else {
+                const captchaContainer = document.getElementById(this.opts.element);
+                if (captchaContainer) {
+                    captchaContainer.parentNode.insertBefore(e.iconElement, captchaContainer.nextSibling);
+                }
             }
         }
     }

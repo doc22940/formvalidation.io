@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     <section class="mv5">
         <div class="flex">
-            <PrevButton target="/guide/plugins/mui">Mui plugin</PrevButton>
+            <PrevButton target="/guide/plugins/password-strength">PasswordStrength plugin</PrevButton>
             <NextButton target="/guide/plugins/recaptcha">Recaptcha plugin</NextButton>
         </div>
     </section>

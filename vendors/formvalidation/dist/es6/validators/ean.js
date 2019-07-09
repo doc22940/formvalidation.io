@@ -4,7 +4,7 @@ export default function ean() {
             if (input.value === '') {
                 return { valid: true };
             }
-            if (!/^(\d{8}|\d{12}|\d{13})$/.test(input.value)) {
+            if (!/^(\d{8}|\d{12}|\d{13}|\d{14})$/.test(input.value)) {
                 return { valid: false };
             }
             const length = input.value.length;

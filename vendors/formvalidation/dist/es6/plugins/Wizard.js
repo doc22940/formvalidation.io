@@ -20,7 +20,7 @@ export default class Wizard extends Plugin {
     install() {
         this.core.registerPlugin(Wizard.EXCLUDED_PLUGIN, new Excluded());
         const form = this.core.getFormElement();
-        this.steps = [...form.querySelectorAll(this.opts.stepSelector)];
+        this.steps = [].slice.call(form.querySelectorAll(this.opts.stepSelector));
         this.numSteps = this.steps.length;
         this.steps.forEach((s) => {
             classSet(s, {

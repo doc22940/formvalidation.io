@@ -11,7 +11,7 @@ export default [
     },
     {
         name: 'AutoFocus',
-        isCorePlugin: true,
+        isCorePlugin: false,
         desc: 'Focus on the first invalid element when submit form',
     },
     {
@@ -43,6 +43,11 @@ export default [
         name: 'Excluded',
         isCorePlugin: true,
         desc: 'Ignore validations on particular field',
+    },
+    {
+        name: 'FieldStatus',
+        isCorePlugin: true,
+        desc: 'Track the field status, and allow to perform an action when a field status is changed',
     },
     {
         name: 'Foundation',
@@ -100,6 +105,11 @@ export default [
         desc: 'Integrate with MUI framework',
     },
     {
+        name: 'PasswordStrength',
+        isCorePlugin: false,
+        desc: 'Check the strength of a password',
+    },
+    {
         name: 'Pure',
         isCorePlugin: false,
         desc: 'Integrate with Pure library',
@@ -108,6 +118,11 @@ export default [
         name: 'Recaptcha',
         isCorePlugin: false,
         desc: 'Shows and validates a Google reCAPTCHA v2',
+    },
+    {
+        name: 'Recaptcha3',
+        isCorePlugin: false,
+        desc: 'Shows and validates a Google reCAPTCHA v3',
     },
     {
         name: 'Semantic',
