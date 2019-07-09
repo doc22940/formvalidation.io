@@ -72,10 +72,7 @@ export default class Recaptcha3 extends Plugin {
     }
     onIconPlaced(e) {
         if (e.field === Recaptcha3.CAPTCHA_FIELD) {
-            const captchaContainer = document.getElementById(this.opts.element);
-            if (captchaContainer) {
-                captchaContainer.parentNode.insertBefore(e.iconElement, captchaContainer.nextSibling);
-            }
+            e.iconElement.style.display = 'none';
         }
     }
 }
