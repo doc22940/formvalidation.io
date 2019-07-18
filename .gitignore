@@ -1,3 +1,8 @@
 .DS_Store
+.sapper
+app/manifest
+build
+dist
+export
 node_modules
-/__sapper__/
+templates/.main.rendered.js
