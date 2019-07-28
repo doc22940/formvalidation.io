@@ -76,6 +76,8 @@
     <Examples heading="Integrate with JavaScript frameworks" examples={[
         'Bundling with Rollup',
         'Bundling with Webpack',
+        'Integrating with Inferno',
+        'Integrating with Mithril',
         'Integrating with Preact',
         'Integrating with React',
         'Integrating with Riot',
